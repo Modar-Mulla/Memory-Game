@@ -1,5 +1,3 @@
-// Creating Boxes
-let boxCont = document.querySelector(".box-con");
 let icons = [
   "Snake",
   "Rat",
@@ -20,27 +18,16 @@ let colors = {
   horse: "#9492f1",
   Rabbit2: "#8f3091",
 };
-for (let i = 0; i < 16; i++) {
-  let box = document.createElement("div");
-  box.setAttribute("class", "box");
-  box.classList.add("prevent-clicking");
-  boxCont.appendChild(box);
-  let frontBox = document.createElement("div");
-  frontBox.classList.add("face", "front");
-  box.appendChild(frontBox);
-  let backBox = document.createElement("div");
-  backBox.classList.add("face", "back");
-  box.appendChild(backBox);
-  let icon = document.createElement("i");
-  backBox.appendChild(icon);
-}
 let boxes = document.querySelectorAll(".box");
 let startBtn = document.querySelector(".start-game");
+let correctMoves = 0;
+
 // Choosing Random Number
 function choosingRandomNumber(length) {
   let randomNum = Math.floor(Math.random() * length);
   return randomNum;
 }
+
 // Shuffling The images
 function shuffling() {
   // let backboxes = document.querySelectorAll(".back");
@@ -53,7 +40,6 @@ function shuffling() {
     allIcons[i].classList.add(`icon-${icons[iconNum[randomNum]]}`);
     let color = colors[icons[iconNum[randomNum]]];
     boxes[i].style.cssText = `color:${color}`;
-    boxes[i].setAttribute("data-num", iconNum[randomNum]);
     boxes[i].setAttribute("data-animal", icons[iconNum[randomNum]]);
     iconNum.splice(randomNum, 1);
   }
@@ -67,7 +53,11 @@ input.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     input.style.display = "none";
     document.querySelector(".welcome-screen").style.display = "none";
-    document.querySelector(".name").textContent = `Name : ${input.value}`;
+    if (input.value == null) {
+      document.querySelector(".name").textContent = "undefined";
+    } else {
+      document.querySelector(".name").textContent = `Name : ${input.value}`;
+    }
   }
 });
 
@@ -99,14 +89,15 @@ function flip(box) {
     // prevent clicking for each 2 cards
     preventClicking();
     if (
-      flippedBoxes[0].getAttribute("data-num") ==
-      flippedBoxes[1].getAttribute("data-num")
+      flippedBoxes[0].getAttribute("data-animal") ==
+      flippedBoxes[1].getAttribute("data-animal")
     ) {
       flippedBoxes.forEach((box) => {
         box.id = "correct";
         box.classList.add("prevent-clicking");
         box.classList.add(`${box.getAttribute("data-animal")}-glow`);
-        if (document.querySelectorAll("#correct").length === boxes.length) {
+        correctMoves += 1;
+        if (correctMoves == 16) {
           let startBtn = document.querySelector(".start-game");
           startBtn.textContent = "Play Again";
           startBtn.addEventListener("click", startGame);
@@ -125,17 +116,17 @@ function flip(box) {
 
 // Starting Game func
 function startGame() {
+  correctMoves = 0;
   boxes.forEach(function (box) {
     box.classList.remove(`${box.getAttribute("data-animal")}-glow`);
   });
-  // shuffling the images
-  shuffling();
-
   // Reseting Moves
   document.querySelector(".moves").setAttribute("data-moves", "0");
   document.querySelector(".moves").textContent = `Moves : ${document
     .querySelector(".moves")
     .getAttribute("data-moves")}`;
+  // shuffling the icons
+  shuffling();
   // remove prevent click
   boxes.forEach((box) => {
     box.classList.remove("prevent-clicking");
