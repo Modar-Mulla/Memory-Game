@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ta782i');
+  src:  url('fonts/icomoon.eot?ta782i#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ta782i') format('truetype'),
+    url('fonts/icomoon.woff?ta782i') format('woff'),
+    url('fonts/icomoon.svg?ta782i#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Snake:before {
+  content: "\e900";
+}
+.icon-Dragon:before {
+  content: "\e901";
+}
+.icon-sheep:before {
+  content: "\e902";
+}
+.icon-rooster:before {
+  content: "\e903";
+}
+.icon-Rat:before {
+  content: "\e904";
+}
+.icon-Rabbit2:before {
+  content: "\e905";
+}
+.icon-horse:before {
+  content: "\e906";
+}
+.icon-Dog:before {
+  content: "\e907";
+}
