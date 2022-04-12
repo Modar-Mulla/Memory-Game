@@ -34,7 +34,6 @@ body {
   margin-top: -60px;
   outline: none;
   transition: 1s;
-  -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
@@ -78,7 +77,6 @@ body {
   border: none;
   padding: 10px;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
@@ -109,12 +107,10 @@ body {
   justify-items: center;
   align-items: center;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   padding: 20px;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.4);
 }
@@ -130,17 +126,14 @@ body {
   cursor: pointer;
   transform-style: preserve-3d;
   transition: 1s;
-  -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   -o-transform: rotateY(0deg);
@@ -154,13 +147,8 @@ body {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
   overflow: hidden;
   transition: 1s;
-  -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
@@ -169,12 +157,10 @@ body {
   background-color: #42505a;
   position: relative;
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transition: 1s;
-  -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;
   -o-transition: 1s;
@@ -197,7 +183,7 @@ body {
     height: 100px;
     font-size: 50px;
   }
-  .box-con{
+  .box-con {
     grid-template-columns: repeat(auto-fill, minmax(calc(100% / 4), 1fr));
   }
 }
@@ -221,48 +207,39 @@ body {
 
 .flip {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
 }
 .Snake-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(1, 153, 52, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(1, 153, 52, 1);
   box-shadow: 0px 0px 25px 0px rgba(1, 153, 52, 1);
 }
 .Rat-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(29, 29, 40, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(29, 29, 40, 1);
   box-shadow: 0px 0px 25px 0px rgba(29, 29, 40, 1);
 }
 .rooster-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(63, 40, 47, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(63, 40, 47, 1);
   box-shadow: 0px 0px 25px 0px rgba(63, 40, 47, 1);
 }
 .Dragon-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(192, 56, 56, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(192, 56, 56, 1);
   box-shadow: 0px 0px 25px 0px rgba(192, 56, 56, 1);
 }
 .Dog-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(201, 201, 201, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(201, 201, 201, 1);
   box-shadow: 0px 0px 25px 0px rgba(201, 201, 201, 1);
 }
 .sheep-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(147, 246, 200, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(147, 246, 200, 1);
   box-shadow: 0px 0px 25px 0px rgba(147, 246, 200, 1);
 }
 .horse-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(147, 146, 241, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(147, 146, 241, 1);
   box-shadow: 0px 0px 25px 0px rgba(147, 146, 241, 1);
 }
 .Rabbit2-glow {
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(143, 48, 145, 1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(143, 48, 145, 1);
   box-shadow: 0px 0px 25px 0px rgba(143, 48, 145, 1);
 }
